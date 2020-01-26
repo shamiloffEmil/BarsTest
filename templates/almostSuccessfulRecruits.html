@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Выбор рекрута</title>
+</head>
+<body>
+<form method="POST" class="post-form">{% csrf_token %}
+   {{recruits.as_p}}
+<select name="slist">
+        <option value="0">Список рекрутов</option>
+        {% for recruit in recruits %}
+            <option value="{{ recruit.pk }}">{{ recruit }}</option>
+        {% endfor %}
+</select>
+
+    <button type="submit" class="save btn btn-default">Save</button>
+</form>
+</body>
+</html>

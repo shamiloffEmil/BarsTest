@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<headtests
+    <meta charset="UTF-8">
+    <title>Тестирование рекрута</title>
+</head>
+<body>
+
+<form method="POST" class="post-form">{% csrf_token %}
+
+    <table>
+  <tr>
+    <td>
+      <table>
+        <tr><td>Вопросы</td></tr>
+          {% for question in questions %}
+        <tr colspan="2"><td>{{forloop.counter}}. {{question}}</td></tr>
+          {% endfor %}
+       </table>
+    </td>
+    <td>
+      <table>
+        <tr><td>Ответы</td></tr>
+          {% for answer in answers %}
+        <tr colspan="2"><td>{{forloop.counter}}. {{answer}}</td></tr>
+           {% endfor %}
+      </table>
+    </td>
+  </tr>
+</table>
+<input type="checkbox" name="acceptEmployee" id="GFG"
+                    value="True">Принять кандидата<br>
+
+    <button type="submit" class="save btn btn-default">Save</button>
+
+
+
+
+
+
+
+</form>
+</body>
+</html>

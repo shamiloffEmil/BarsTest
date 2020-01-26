@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<headtests
+    <meta charset="UTF-8">
+    <title>Тестирование рекрута</title>
+</head>
+<body>
+
+<form method="POST" class="post-form">{% csrf_token %}
+
+{% for test in questions %}
+
+    {{ test.question}}
+    {{answer.as_p}}
+<br/>
+{% endfor %}
+
+
+    <button type="submit" class="save btn btn-default">Save</button>
+</form>
+</body>
+</html>

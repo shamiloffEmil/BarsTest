@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Руки тени ситхов</title>
+</head>
+<body>
+<form method="POST" class="post-form">{% csrf_token %}
+    {% for sithHandShadow in sithHandShadows %}
+
+    {{sithHandShadow.name}}
+    {{sithHandShadow.countOfHandShadow}}
+    <br/>
+    {% endfor %}
+
+    <button type="submit" class="save btn btn-default">Save</button>
+</form>
+</body>
+</html>
