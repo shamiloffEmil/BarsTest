@@ -25,8 +25,6 @@ def recruitRegistration(request):
             recruit.save()
             response.set_cookie('recruit_id', recruit.pk)
 
-        #return redirect('recruitTest', pk = recruit.pk)
-
         return response
 
     else:
