@@ -3,17 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Руки тени ситхов</title>
+    <style>
+   #centerLayer {
+    position: absolute; /* Абсолютное позиционирование */
+    width: 50%; /* Ширина слоя в пикселах */
+    height: 50%; /* Высота слоя в пикселах */
+    left: 50%; /* Положение слоя от левого края */
+    top: 50%; /* Положение слоя от верхнего края */
+    margin-left: -150px; /* Отступ слева */
+    margin-top: -100px;	/* Отступ сверху */
+   }
+    </style>
 </head>
 <body>
-<form method="POST" class="post-form">{% csrf_token %}
+<form method="POST" class="post-form" id="centerLayer">{% csrf_token %}
+    <table border="1">
+    <caption>Количество рук тени ситхов</caption>
+        <tr>
+        <th>Ситх</th>
+        <th>Рук тени</th>
+        </tr>
     {% for sithHandShadow in sithHandShadows %}
-
-    {{sithHandShadow.name}}
-    {{sithHandShadow.countOfHandShadow}}
-    <br/>
+        <tr>
+        <td>{{sithHandShadow.name}}</td>
+        <td>{{sithHandShadow.countOfHandShadow}}</td>
+        </tr>
     {% endfor %}
-
-    <button type="submit" class="save btn btn-default">Save</button>
+     </table>
+    <button type="submit" class="save btn btn-default">ОК</button>
 </form>
 </body>
 </html>

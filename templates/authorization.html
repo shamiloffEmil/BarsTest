@@ -1,17 +1,35 @@
 <html>
     <head>
         <title>Рекрутинг</title>
+        <style>
+   #centerLayer {
+    position: absolute; /* Абсолютное позиционирование */
+    width: 50%; /* Ширина слоя в пикселах */
+    height: 50%; /* Высота слоя в пикселах */
+    left: 50%; /* Положение слоя от левого края */
+    top: 50%; /* Положение слоя от верхнего края */
+    margin-left: -150px; /* Отступ слева */
+    margin-top: -100px;	/* Отступ сверху */
+   }
+        </style>
     </head>
+
     <body>
-    <div class="page-header">
 
+    <div class="page-header" id="centerLayer">
 
-        <h1><a href="{% url 'sithRegistration'%}">Для Ситхов</a></h1>
-        <h1><a href="{% url 'recruitRegistration'%}">Для рекрутов</a></h1>
+        <table border="0">
+        <tr>
+            <th><h1><a href="{% url 'sithRegistration'%}">Для Ситхов</a></h1></th>
+            <th><h1> | </h1></th>
+            <th><h1><a href="{% url 'recruitRegistration'%}">Для рекрутов</a></h1></th>
+        </tr>
+        </table>
 
         <a href="{% url 'sithHandShadow'%}">Руки тени ситхов</a>
         <br>
         <a href="{% url 'sithHandShadowMore1'%}">Ситхни, у которых более 1 руки тени</a>
     </div>
+
 </body>
 </html>

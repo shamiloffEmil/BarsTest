@@ -2,13 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Выбор рекрута</title>
+    <title>Выбор ситха</title>
+     <style>
+   #centerLayer {
+    position: absolute; /* Абсолютное позиционирование */
+    width: 50%; /* Ширина слоя в пикселах */
+    height: 50%; /* Высота слоя в пикселах */
+    left: 50%; /* Положение слоя от левого края */
+    top: 50%; /* Положение слоя от верхнего края */
+    margin-left: -150px; /* Отступ слева */
+    margin-top: -100px;	/* Отступ сверху */
+   }
+    </style>
 </head>
 <body>
-<form method="POST" class="post-form">{% csrf_token %}
+<form method="POST" class="post-form" id="centerLayer">{% csrf_token %}
 
    {{siths.as_p}}
-
     <button type="submit" class="save btn btn-default">Save</button>
 </form>
 </body>

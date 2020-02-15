@@ -3,14 +3,29 @@
 <headtests
     <meta charset="UTF-8">
     <title>Тестирование рекрута</title>
+     <style>
+   #centerLayer {
+    position: absolute; /* Абсолютное позиционирование */
+    width: 50%; /* Ширина слоя в пикселах */
+    height: 50%; /* Высота слоя в пикселах */
+    left: 50%; /* Положение слоя от левого края */
+    top: 50%; /* Положение слоя от верхнего края */
+    margin-left: -150px; /* Отступ слева */
+    margin-top: -100px;	/* Отступ сверху */
+   }
+    </style>
 </head>
 <body>
 
-<form method="POST" class="post-form">{% csrf_token %}
+<form method="POST" class="post-form" id="centerLayer">{% csrf_token %}
 
-{% for test in questions %}
+Тест № {{test.pk}}
 
-    {{ test.question}}
+<br>
+
+{% for q in questions %}
+
+    {{ q.question}}
     {{answer.as_p}}
 <br/>
 {% endfor %}

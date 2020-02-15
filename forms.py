@@ -25,7 +25,6 @@ class ResultForm(forms.ModelForm):
 		model = Result
 		fields = ('recruit', 'test', 'answer')
 
-
 class AnswerForm(forms.ModelForm):
 	class Meta:
 		model = Answer

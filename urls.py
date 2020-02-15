@@ -21,12 +21,10 @@ from . import views
 urlpatterns = [
     path('', views.authorization, name='authorization'),
     path('recruitRegistration', views.recruitRegistration, name='recruitRegistration'),
-    # path('recruit/<int:pk>/test', views.recruitTest, name='recruitTest'),
     path('recruit/test', views.recruitTest, name='recruitTest'),
     path('sithRegistration', views.sithRegistration, name='sithRegistration'),
     path('almostSuccessfulRecruits', views.almostSuccessfulRecruits, name='almostSuccessfulRecruits'),
     path('recruitResults/<int:pk>', views.recruitResults, name='recruitResults'),
-
     path('sithHandShadow', views.sithHandShadow, name='sithHandShadow'),
     path('sithHandShadowMore1', views.sithHandShadowMore1, name='sithHandShadowMore1'),
 
