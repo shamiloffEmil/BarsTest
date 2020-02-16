@@ -1,19 +1,12 @@
 from django import forms
 from django.forms import ModelChoiceField
 
-from BarsTest.models import Question
 from .models import Recruit, TestHandShadow, Result, Answer, Sith
 
 class RecruitForm(forms.ModelForm):
 	class Meta:
 		model = Recruit
 		fields = ('name', 'planetOfResidence', 'age', 'email')
-
-# class QuestionForm(forms.ModelForm):
-#     question =
-    # class Meta:
-    #     model = Question
-    #     fields = ('question')
 
 class TestHandShadowForm(forms.ModelForm):
 	class Meta:

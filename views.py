@@ -1,8 +1,6 @@
 import random
 from django.db import connection
 from django.shortcuts import redirect
-from django.urls import reverse
-
 from .forms import RecruitForm, ResultForm , AnswerForm, SithForm,TestHandShadowForm
 from .models import TestHandShadow, Recruit, Answer, Result, Sith
 from django.shortcuts import render, get_object_or_404

@@ -1,7 +1,5 @@
 from django.db import models
 
-from django.db import models
-
 # Create your models here.
 
 class Planet(models.Model):
@@ -59,8 +57,3 @@ class Result(models.Model):
     test = models.ForeignKey(TestHandShadow, on_delete=models.PROTECT)
     answer  = models.ManyToManyField(Answer)
 
-    # question = models.ForeignKey(question, on_delete=models.PROTECT)
-
-
-
-# models.ForeignKey('blog.Post', related_name='comments', on_delete=models.CASCADE, )
