@@ -19,6 +19,7 @@ from . import views
 
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('', views.authorization, name='authorization'),
     path('recruitRegistration', views.recruitRegistration, name='recruitRegistration'),
     path('recruit/test', views.recruitTest, name='recruitTest'),
